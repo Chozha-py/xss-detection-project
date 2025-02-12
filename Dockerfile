@@ -10,6 +10,9 @@ COPY backend/requirements.txt .
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
+# Copy the model directory (FIX)
+COPY models/ models/
+
 # Copy the rest of the application files
 COPY backend/ .
 

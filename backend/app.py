@@ -10,8 +10,10 @@ import os
 
 # Get the absolute path of the model files
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))  # Get the current directory of app.py
-MODEL_PATH = os.path.join(BASE_DIR, "../models/xss_model.pkl")
-VECTORIZER_PATH = os.path.join(BASE_DIR, "../models/vectorizer.pkl")
+
+MODEL_PATH = os.path.join(os.getcwd(), "models", "xss_model.pkl")
+
+VECTORIZER_PATH = os.path.join(BASE_DIR, "models", "vectorizer.pkl")
 
 # Load the pre-trained machine learning model and vectorizer
 model = joblib.load(MODEL_PATH)
