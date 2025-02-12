@@ -1,0 +1,3 @@
+text,label
+"<script>alert(1)</script>",1
+"Hello, how are you?",0
